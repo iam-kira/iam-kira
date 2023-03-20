@@ -93,7 +93,8 @@
 <img hight="320" width="450" align="right" alt="GIF" src="https://github.com/iam-kira/iam-kira/blob/main/Contactme.gif">
 
 
-If you want to reach out to me about anything, be it some doubt or just to hangout and talk or want to game together just ping me 😃.
+If you want to reach out to me about anything, be 
+it some doubt or just to hangout and talk or want to game together just ping me 😃.
 
 <div align="left">
   <a href="https://discord.com/channels/@me" target="_blank">
