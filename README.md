@@ -1,6 +1,4 @@
 <h1 align="center">Konichiwa 👋, What's up?</h1>       
-
-
 <div align="center">
 <img hight="300" width="700" alt="GIF" align="center" src="https://github.com/iam-kira/iam-kira/blob/main/Konichiwa.gif">
 </div>
