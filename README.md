@@ -137,11 +137,5 @@ If you want to reach out to me about anything, be it some doubt or just to hango
   <img src="https://profile-counter.glitch.me/iam/count.svg?"  />
 </div>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: dark)" srcset="github-snake.svg" />
-  <img alt="github-snake" src="[github-snake.svg](https://user-images.githubusercontent.com/72202814/226297415-bdaf5304-78ec-4b39-a952-63bd3090a4d9.svg)" />
-   
-</picture>
-
+<img alt="github-snake" src="[github-snake.svg](https://user-images.githubusercontent.com/72202814/226297415-bdaf5304-78ec-4b39-a952-63bd3090a4d9.svg)" />
 
