@@ -21,7 +21,8 @@
 <img src="https://github.com/SP-XD/SP-XD/blob/main/images/dev-working_rounded.gif?raw=true" href="https://github.com/sp-xd" alt="CoDiNg RocKs" align="right" width="500"/>
 <!-- <img hight="400" width="500" alt="GIF" align="right" src="https://github.com/Xx-Ashutosh-xX/Xx-Ashutosh-xX/blob/master/assets/1936.gif"> -->
 
-<p align="left">✨ Creating bugs since 2020<br>🎯 Goals: ...<br>🎲 Fun fact: Thinking about goals all the time.</p>
+<p align="left">✨ Creating bugs since 2020<br>🎯 Goals: ...<br>🎲 Fun fact: Thinking about goals all the 
+      time.</p>
 
 ### - 📚 Learning :
 - ✨ Data Structures & Algorithms
