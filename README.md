@@ -17,7 +17,7 @@
 - 🎯 2026 Goals: **Scale MCP-based data engineering and technical leadership impact**
 - 🎲 Fun fact: **Always thinking about goals**
 
-![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-50%20Thousand%20lines%20of%20code-blue)
+![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-%20Million%20lines%20of%20code-blue)
 
 <div align="right">
   <img src="https://github.com/SP-XD/SP-XD/blob/main/images/dev-working_rounded.gif?raw=true" width="420" alt="Coding GIF"/>
