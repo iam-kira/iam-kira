@@ -14,23 +14,25 @@
 - 🤖 Building **Industrial AI + ETL automation** products at scale
 - 📦 Owned **800+ production pipelines** and **30+ data products**
 - ⚡ Reduced manual ETL effort by **80%** with AI-assisted platform engineering
-- 🎯 2026 Goals: **Scale MCP-based data engineering and technical leadership impact**
+- 🎯 2026+ Goals: **Grow into a Technical Lead and build toward becoming a startup CEO**
 - 🎲 Fun fact: **Always thinking about goals**
 
-![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-%20Million%20lines%20of%20code-blue)
+![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-50%20Thousand%20lines%20of%20code-blue)
 
 <div align="right">
   <img src="https://github.com/SP-XD/SP-XD/blob/main/images/dev-working_rounded.gif?raw=true" width="420" alt="Coding GIF"/>
 </div>
 
 ## Currently Learning 📚
-- Data Structures & Algorithms
-- Machine Learning
-- MLOps and production-grade LLM workflows
+- Advanced Data Engineering & Distributed Systems Design
+- Technical Leadership, Mentoring, and Engineering Management
+- Product Thinking, Startup Strategy, and GTM Basics
+- MLOps, LLMOps, and production-grade AI system architecture
+- Decision-making with business metrics (cost, reliability, velocity)
 
 ## Career Snapshot 🚀
 - **Current Role:** Data Engineer → Technical Lead (scope-based), Daimler Truck Innovation Center India
-- **Domain:** Shopfloor digitalization, industrial analytics, ETL productization
+- **Domain:** Shopfloor/WCM digitalization, industrial analytics, ETL productization
 - **Impact:** Pipeline delivery reduced from hours to minutes using MCP-based AI code synthesis
 - **Reliability:** Zero SLA breaches across 2 years on high-volume production workloads
 
