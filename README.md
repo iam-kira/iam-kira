@@ -30,7 +30,7 @@
 
 ## Career Snapshot 🚀
 - **Current Role:** Data Engineer → Technical Lead (scope-based), Daimler Truck Innovation Center India
-- **Domain:** Shopfloor/WCM digitalization, industrial analytics, ETL productization
+- **Domain:** Shopfloor digitalization, industrial analytics, ETL productization
 - **Impact:** Pipeline delivery reduced from hours to minutes using MCP-based AI code synthesis
 - **Reliability:** Zero SLA breaches across 2 years on high-volume production workloads
 
