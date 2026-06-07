@@ -1,7 +1,7 @@
 # VIJAY BIRADAR
 **Data Engineer · Industrial AI & ETL Automation**  
 Bengaluru, India  
-vijayybiradar@gmail.com · +91 7760162366 · [linkedin.com/in/vijay-biradar](https://linkedin.com/in/vijay-biradar)
+[linkedin.com/in/vijay-biradar](https://linkedin.com/in/vijay-biradar)
 
 ---
 
