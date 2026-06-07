@@ -1,6 +1,6 @@
 <h1 align="center">Konnichiwa 👋, I'm Vijay Biradar</h1>
 <p align="center">
-  Upcoming wealthiest & AI Enthusiast from India 🇮🇳
+   Upcoming wealthiest man & AI Enthusiast from India
 </p>
 
 <div align="center">
