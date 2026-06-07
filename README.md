@@ -71,15 +71,40 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="40" width="52" alt="mongodb" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" height="40" width="52" alt="mysql" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" height="40" width="52" alt="spring" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" height="40" width="52" alt="kafka" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg" height="40" width="52" alt="airflow" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/databricks/databricks-original.svg" height="40" width="52" alt="databricks" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" height="40" width="52" alt="aws" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="40" width="52" alt="docker" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" height="40" width="52" alt="kubernetes" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="40" width="52" alt="linux" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" width="52" alt="git" />
 </div>
 
 ## Tech Stack Badges 🛠
-![](https://img.shields.io/badge/OS-Linux-informational?style=flat&logo=linux&logoColor=white&color=violet)
-![](https://img.shields.io/badge/Editor-VS_Code-informational?style=flat&logo=visual-studio-code&logoColor=white&color=violet)
+![](https://img.shields.io/badge/Code-Python-informational?style=flat&logo=python&logoColor=white&color=violet)
+![](https://img.shields.io/badge/Code-SQL-informational?style=flat&logo=postgresql&logoColor=white&color=violet)
+![](https://img.shields.io/badge/Code-Scala-informational?style=flat&logo=scala&logoColor=white&color=violet)
+
+![](https://img.shields.io/badge/ETL-Talend-informational?style=flat&logo=talend&logoColor=white&color=violet)
+![](https://img.shields.io/badge/Orchestration-Airflow-informational?style=flat&logo=apacheairflow&logoColor=white&color=violet)
+![](https://img.shields.io/badge/Streaming-Kafka-informational?style=flat&logo=apachekafka&logoColor=white&color=violet)
+![](https://img.shields.io/badge/Streaming-Flink-informational?style=flat&logo=apacheflink&logoColor=white&color=violet)
+
+![](https://img.shields.io/badge/Data-Databricks-informational?style=flat&logo=databricks&logoColor=white&color=violet)
+![](https://img.shields.io/badge/Data-Apache%20Iceberg-informational?style=flat&logo=apacheiceberg&logoColor=white&color=violet)
+![](https://img.shields.io/badge/Data-InfluxDB-informational?style=flat&logo=influxdb&logoColor=white&color=violet)
+![](https://img.shields.io/badge/Data-Dremio-informational?style=flat&logo=dremio&logoColor=white&color=violet)
+![](https://img.shields.io/badge/Cloud-AWS%20Glue-informational?style=flat&logo=amazonaws&logoColor=white&color=violet)
+
+![](https://img.shields.io/badge/Observability-Grafana-informational?style=flat&logo=grafana&logoColor=white&color=violet)
+![](https://img.shields.io/badge/Observability-Telegraf-informational?style=flat&logo=influxdb&logoColor=white&color=violet)
+
 ![](https://img.shields.io/badge/Tools-Docker-informational?style=flat&logo=docker&logoColor=white&color=violet)
 ![](https://img.shields.io/badge/Tools-Kubernetes-informational?style=flat&logo=kubernetes&logoColor=white&color=violet)
-![](https://img.shields.io/badge/Shell-Bash-informational?style=flat&logo=gnu-bash&logoColor=white&color=violet)
+![](https://img.shields.io/badge/OS-Linux-informational?style=flat&logo=linux&logoColor=white&color=violet)
+![](https://img.shields.io/badge/Cloud-AWS-informational?style=flat&logo=amazonaws&logoColor=white&color=violet)
+![](https://img.shields.io/badge/Editor-VS_Code-informational?style=flat&logo=visual-studio-code&logoColor=white&color=violet)
 
 ---
 
