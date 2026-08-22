@@ -9,7 +9,7 @@
 
 ---
 
-## [About Me](https://iam-kira.github.io/vijaybiradar/)    💬
+## [About Me (click here)](https://iam-kira.github.io/vijaybiradar/)    💬
 - ✨ Data Engineer at **Daimler Truck Innovation Center** (3+ years)
 - 🤖 Building **Industrial AI + ETL automation** products at scale
 - 📦 Owned **800+ production pipelines** and **30+ data products**
