@@ -126,9 +126,9 @@ running the full suites locally rather than reading issue trackers.
 ## Contribution Graph 🐍
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/iam-kira/iam-kira/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/iam-kira/iam-kira/output/github-snake.svg" />
-    <img alt="snake eating my contribution graph" src="https://raw.githubusercontent.com/iam-kira/iam-kira/output/github-snake.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/iam-kira/iam-kira/refs/heads/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/iam-kira/iam-kira/refs/heads/output/github-snake.svg" />
+    <img alt="snake eating my contribution graph" src="https://raw.githubusercontent.com/iam-kira/iam-kira/refs/heads/output/github-snake.svg" />
   </picture>
 </div>
 
