@@ -42,6 +42,21 @@
 - Enabled ~40% faster audit preparation with real-time KPI visibility across global stakeholders
 - Awards: **Continuous Effort Reliability (2024)** · **Integrity (2025)** · **Curious Scholar (2025)**
 
+## Open Source 🌱
+Upstream contributions to projects I actually use. Currently in review:
+
+| Project | Contribution | Status |
+| --- | --- | --- |
+| [marimo](https://github.com/marimo-team/marimo) · 22.5k⭐ | [#10638](https://github.com/marimo-team/marimo/pull/10638) — made the command-mode shortcut configurable; root cause was an override path that silently made *every* hotkey undisableable | In review |
+| [pylint](https://github.com/pylint-dev/pylint) | [#11359](https://github.com/pylint-dev/pylint/issues/11359) · [#11360](https://github.com/pylint-dev/pylint/pull/11360) — functional test fails on any Windows checkout without symlink privilege | In review |
+| [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) · 24k⭐ | [#3408](https://github.com/modelcontextprotocol/python-sdk/issues/3408) — test suite fails for unprivileged Windows contributors | Reported |
+
+**Why the last two are interesting:** both projects *do* run Windows in CI, and both are
+green. GitHub's Windows runners are privileged, so anything depending on privilege —
+creating a symlink, for instance — passes in CI and fails on an ordinary Windows machine.
+CI cannot see that class of bug on a platform it explicitly covers. I found both by
+running the full suites locally rather than reading issue trackers.
+
 ## Hobbies 🎮
 - Gaming
 - Watching Anime
@@ -145,4 +160,4 @@ If you want to reach out for collaboration, doubts, or just to talk tech/anime/g
 
 ---
 
-_Last updated: June 2026_
+_Last updated: August 2026_
