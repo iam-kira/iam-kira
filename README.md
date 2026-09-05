@@ -43,22 +43,24 @@
 - Awards: **Continuous Effort Reliability (2024)** · **Integrity (2025)** · **Curious Scholar (2025)**
 
 ## Open Source 🌱
-Upstream contributions to projects I use, found by running their test suites on Windows
-rather than by browsing issue trackers.
+Upstream contributions to projects I use — found by reading crash reports and by running
+test suites on Windows, rather than by browsing issue trackers.
 
 | Project | Contribution | Status |
 | --- | --- | --- |
-| [pipx](https://github.com/pypa/pipx) · 13.0k⭐ | [#2021](https://github.com/pypa/pipx/issues/2021) · [#2023](https://github.com/pypa/pipx/pull/2023) — the whole test suite errored on Windows without symlink privilege; a session fixture put `git` on `PATH` via a symlink guarded only for `FileExistsError` | ✅ **Merged** |
+| [pipx](https://github.com/pypa/pipx) · 13.0k⭐ | [#2023](https://github.com/pypa/pipx/pull/2023) — the whole test suite errored on Windows without symlink privilege; a session fixture put `git` on `PATH` via a symlink guarded only for `FileExistsError` | ✅ **Merged** |
+| [pylint](https://github.com/pylint-dev/pylint) · 5.7k⭐ | [#11381](https://github.com/pylint-dev/pylint/pull/11381) — `InferenceError` crash when a class attribute is bound by a for-loop target | In review |
+| [pylint](https://github.com/pylint-dev/pylint) · 5.7k⭐ | [#11382](https://github.com/pylint-dev/pylint/pull/11382) — `IndexError` on `Generator[()]`; a guard was vacuously true for an empty subscript | In review |
 | [marimo](https://github.com/marimo-team/marimo) · 22.6k⭐ | [#10638](https://github.com/marimo-team/marimo/pull/10638) — made the command-mode shortcut configurable; the root cause was an override path that silently made *every* hotkey undisableable | In review |
-| [pylint](https://github.com/pylint-dev/pylint) · 5.7k⭐ | [#11359](https://github.com/pylint-dev/pylint/issues/11359) · [#11360](https://github.com/pylint-dev/pylint/pull/11360) — a functional test fails on any Windows checkout without symlink privilege | In review |
+| [pylint](https://github.com/pylint-dev/pylint) · 5.7k⭐ | [#11360](https://github.com/pylint-dev/pylint/pull/11360) — a functional test fails on any Windows checkout without symlink privilege | In review |
 | [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) · 24.2k⭐ | [#3408](https://github.com/modelcontextprotocol/python-sdk/issues/3408) — test suite fails for unprivileged Windows contributors; independently reproduced | Reported |
+| [wandb](https://github.com/wandb/wandb) · 11.2k⭐ | [#12726](https://github.com/wandb/wandb/issues/12726) — `sync_tensorboard=True` fails on Windows; `tb_watcher` ignores `settings.symlink` | Reported |
 
-**The pattern behind these:** every one of those projects runs Windows in CI, and every
-Windows job is green. GitHub's runners are privileged, so anything privilege-dependent —
-creating a symlink, for instance — passes in CI and fails on an ordinary Windows machine.
-CI cannot see that class of bug on a platform it explicitly covers, and a contributor who
-hits it usually assumes their own setup is broken rather than filing it. That gap is
-where all four of these came from.
+**A pattern worth naming.** Several of these projects run Windows in CI, and every Windows
+job is green. GitHub's runners are privileged, so anything privilege-dependent — creating
+a symlink, for instance — passes in CI and fails on an ordinary Windows machine. CI cannot
+see that class of bug on a platform it explicitly covers, and a contributor who hits it
+usually assumes their own setup is broken rather than filing it.
 
 ## Hobbies 🎮
 - Gaming
