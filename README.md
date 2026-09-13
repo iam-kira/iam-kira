@@ -43,24 +43,40 @@
 - Awards: **Continuous Effort Reliability (2024)** · **Integrity (2025)** · **Curious Scholar (2025)**
 
 ## Open Source 🌱
-Upstream contributions to projects I use — found by reading crash reports and by running
-test suites on Windows, rather than by browsing issue trackers.
+Bugs found by running test suites and builds on Windows, then reported or fixed upstream.
 
-| Project | Contribution | Status |
+**5 fixed upstream · 3 in review · 6 reported — 14 projects, 14 organisations.**
+
+### Fixed upstream
+| Project | Contribution | Outcome |
 | --- | --- | --- |
-| [pipx](https://github.com/pypa/pipx) · 13.0k⭐ | [#2023](https://github.com/pypa/pipx/pull/2023) — the whole test suite errored on Windows without symlink privilege; a session fixture put `git` on `PATH` via a symlink guarded only for `FileExistsError` | ✅ **Merged** |
-| [pylint](https://github.com/pylint-dev/pylint) · 5.7k⭐ | [#11381](https://github.com/pylint-dev/pylint/pull/11381) — `InferenceError` crash when a class attribute is bound by a for-loop target | In review |
-| [pylint](https://github.com/pylint-dev/pylint) · 5.7k⭐ | [#11382](https://github.com/pylint-dev/pylint/pull/11382) — `IndexError` on `Generator[()]`; a guard was vacuously true for an empty subscript | In review |
-| [marimo](https://github.com/marimo-team/marimo) · 22.6k⭐ | [#10638](https://github.com/marimo-team/marimo/pull/10638) — made the command-mode shortcut configurable; the root cause was an override path that silently made *every* hotkey undisableable | In review |
-| [pylint](https://github.com/pylint-dev/pylint) · 5.7k⭐ | [#11360](https://github.com/pylint-dev/pylint/pull/11360) — a functional test fails on any Windows checkout without symlink privilege | In review |
-| [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) · 24.2k⭐ | [#3408](https://github.com/modelcontextprotocol/python-sdk/issues/3408) — test suite fails for unprivileged Windows contributors; independently reproduced | Reported |
-| [wandb](https://github.com/wandb/wandb) · 11.2k⭐ | [#12726](https://github.com/wandb/wandb/issues/12726) — `sync_tensorboard=True` fails on Windows; `tb_watcher` ignores `settings.symlink` | Reported |
+| [pipx](https://github.com/pypa/pipx) · 12.9k⭐ | [#2023](https://github.com/pypa/pipx/pull/2023) — test suite errored on Windows: a fixture's `git` symlink was only guarded for `FileExistsError` | ✅ PR merged |
+| [pylint](https://github.com/pylint-dev/pylint) · 5.7k⭐ | [#11360](https://github.com/pylint-dev/pylint/pull/11360) — functional test failed on any Windows checkout without symlink privilege | ✅ PR merged |
+| [mlflow](https://github.com/mlflow/mlflow) · 27.9k⭐ | [#25641](https://github.com/mlflow/mlflow/issues/25641) — `mlflow-skinny` silently built an empty wheel on Windows checkouts | ✅ Fixed in [#25713](https://github.com/mlflow/mlflow/pull/25713) |
+| [gradio](https://github.com/gradio-app/gradio) · 43.5k⭐ | [#13801](https://github.com/gradio-app/gradio/issues/13801) — `gradio skills add` crashed on Windows with `WinError 1314` | ✅ Fixed by maintainers |
+| [openai-agents-python](https://github.com/openai/openai-agents-python) · 29.3k⭐ | [#4852](https://github.com/openai/openai-agents-python/issues/4852) — 12 sandbox tests failed on Windows without symlink privilege | ◐ Test half fixed in [#4853](https://github.com/openai/openai-agents-python/pull/4853) |
 
-**A pattern worth naming.** Several of these projects run Windows in CI, and every Windows
-job is green. GitHub's runners are privileged, so anything privilege-dependent — creating
-a symlink, for instance — passes in CI and fails on an ordinary Windows machine. CI cannot
-see that class of bug on a platform it explicitly covers, and a contributor who hits it
-usually assumes their own setup is broken rather than filing it.
+### In review
+| Project | Contribution | Outcome |
+| --- | --- | --- |
+| [transformers](https://github.com/huggingface/transformers) · 165.2k⭐ | [#48543](https://github.com/huggingface/transformers/pull/48543) — skip the symlinked hub-cache test when symlinks are unavailable | PR open |
+| [langchain](https://github.com/langchain-ai/langchain) · 146.2k⭐ | [#40405](https://github.com/langchain-ai/langchain/pull/40405) — skip prompt-loading symlink tests when symlinks are unavailable | PR open |
+| [marimo](https://github.com/marimo-team/marimo) · 22.7k⭐ | [#10638](https://github.com/marimo-team/marimo/pull/10638) — configurable command-mode shortcut; an override bug made every hotkey undisableable | PR open |
+
+### Reported
+| Project | Contribution | Outcome |
+| --- | --- | --- |
+| [litellm](https://github.com/BerriAI/litellm) · 58.5k⭐ | [#40046](https://github.com/BerriAI/litellm/issues/40046) — five tests fail on Windows: symlinks, POSIX quoting, and a POSIX-only file mode | Issue open |
+| [black](https://github.com/psf/black) · 41.8k⭐ | [#5389](https://github.com/psf/black/issues/5389) — three symlink tests fail on Windows, a regression of #287 | Issue open |
+| [pytorch-lightning](https://github.com/Lightning-AI/pytorch-lightning) · 31.3k⭐ | [#21932](https://github.com/Lightning-AI/pytorch-lightning/issues/21932) — TensorBoard symlink test fails on Windows | Issue open |
+| [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) · 24.2k⭐ | [#3408](https://github.com/modelcontextprotocol/python-sdk/issues/3408) — path-security test fails for unprivileged Windows contributors | Issue open |
+| [adk-python](https://github.com/google/adk-python) · 21.5k⭐ | [#7029](https://github.com/google/adk-python/issues/7029) — new-file check misses added files on Windows under jj and hg | Issue open |
+| [anthropic-sdk-python](https://github.com/anthropics/anthropic-sdk-python) · 3.8k⭐ | [#1915](https://github.com/anthropics/anthropic-sdk-python/issues/1915) — three symlink tests are missing the `needs_symlinks` marker | Issue open |
+
+**Why these exist.** Several of these projects test Windows in CI, and the jobs are green.
+GitHub's runners can create symlinks; an ordinary Windows user cannot. Privilege-dependent
+code passes CI and fails for every contributor on a normal machine — who usually assumes
+their own setup is broken and never reports it.
 
 ## Hobbies 🎮
 - Gaming
