@@ -45,36 +45,40 @@
 ## Open Source 🌱
 Bugs found by running test suites and builds on Windows, then reported or fixed upstream.
 
-**5 fixed upstream · 3 in review · 6 reported — 14 projects, 14 organisations.**
+**3 PRs merged · 4 more fixed upstream from my reports · 6 PRs in review · 5 issues open** — 18 projects.
 
 ### Fixed upstream
 | Project | Contribution | Outcome |
 | --- | --- | --- |
-| [pipx](https://github.com/pypa/pipx) · 12.9k⭐ | [#2023](https://github.com/pypa/pipx/pull/2023) — test suite errored on Windows: a fixture's `git` symlink was only guarded for `FileExistsError` | ✅ PR merged |
+| [pipx](https://github.com/pypa/pipx) · 12.9k⭐ | [#2023](https://github.com/pypa/pipx/pull/2023) — test suite errored on Windows: a fixture symlinked `git` onto `PATH`, guarded only for `FileExistsError` | ✅ PR merged |
 | [pylint](https://github.com/pylint-dev/pylint) · 5.7k⭐ | [#11360](https://github.com/pylint-dev/pylint/pull/11360) — functional test failed on any Windows checkout without symlink privilege | ✅ PR merged |
-| [mlflow](https://github.com/mlflow/mlflow) · 27.9k⭐ | [#25641](https://github.com/mlflow/mlflow/issues/25641) — `mlflow-skinny` silently built an empty wheel on Windows checkouts | ✅ Fixed in [#25713](https://github.com/mlflow/mlflow/pull/25713) |
-| [gradio](https://github.com/gradio-app/gradio) · 43.5k⭐ | [#13801](https://github.com/gradio-app/gradio/issues/13801) — `gradio skills add` crashed on Windows with `WinError 1314` | ✅ Fixed by maintainers |
-| [openai-agents-python](https://github.com/openai/openai-agents-python) · 29.3k⭐ | [#4852](https://github.com/openai/openai-agents-python/issues/4852) — 12 sandbox tests failed on Windows without symlink privilege | ◐ Test half fixed in [#4853](https://github.com/openai/openai-agents-python/pull/4853) |
+| [dspy](https://github.com/stanfordnlp/dspy) · 38.1k⭐ | [#10410](https://github.com/stanfordnlp/dspy/pull/10410) — alias-collision test failed when symlink creation is unavailable | ✅ PR merged |
+| [gradio](https://github.com/gradio-app/gradio) · 43.5k⭐ | [#13801](https://github.com/gradio-app/gradio/issues/13801) — `gradio skills add` crashed on Windows with `WinError 1314` | ✅ Fixed in [#13803](https://github.com/gradio-app/gradio/pull/13803) |
+| [black](https://github.com/psf/black) · 41.8k⭐ | [#5389](https://github.com/psf/black/issues/5389) — three symlink tests failed on Windows, a regression of #287 | ✅ Fixed in [#5390](https://github.com/psf/black/pull/5390) |
+| [mlflow](https://github.com/mlflow/mlflow) · 28.0k⭐ | [#25641](https://github.com/mlflow/mlflow/issues/25641) — `mlflow-skinny` silently built an empty wheel on Windows checkouts | ✅ Fixed in [#25713](https://github.com/mlflow/mlflow/pull/25713) |
+| [openai-agents-python](https://github.com/openai/openai-agents-python) · 29.5k⭐ | [#4852](https://github.com/openai/openai-agents-python/issues/4852) — 12 sandbox tests failed on Windows without symlink privilege | ◐ Test half fixed in [#4853](https://github.com/openai/openai-agents-python/pull/4853) |
 
 ### In review
 | Project | Contribution | Outcome |
 | --- | --- | --- |
-| [transformers](https://github.com/huggingface/transformers) · 165.2k⭐ | [#48543](https://github.com/huggingface/transformers/pull/48543) — skip the symlinked hub-cache test when symlinks are unavailable | PR open |
-| [langchain](https://github.com/langchain-ai/langchain) · 146.2k⭐ | [#40405](https://github.com/langchain-ai/langchain/pull/40405) — skip prompt-loading symlink tests when symlinks are unavailable | PR open |
-| [marimo](https://github.com/marimo-team/marimo) · 22.7k⭐ | [#10638](https://github.com/marimo-team/marimo/pull/10638) — configurable command-mode shortcut; an override bug made every hotkey undisableable | PR open |
+| [transformers](https://github.com/huggingface/transformers) · 166.2k⭐ | [#48543](https://github.com/huggingface/transformers/pull/48543) — skip the symlinked hub-cache test when symlinks are unavailable | PR open |
+| [langflow](https://github.com/langflow-ai/langflow) · 154.9k⭐ | [#15103](https://github.com/langflow-ai/langflow/pull/15103) — skip symlink path-containment tests on unprivileged Windows | PR open |
+| [langchain](https://github.com/langchain-ai/langchain) · 146.6k⭐ | [#40405](https://github.com/langchain-ai/langchain/pull/40405) — skip prompt-loading symlink tests when symlinks are unavailable | PR open |
+| [crewAI](https://github.com/crewAIInc/crewAI) · 58.7k⭐ | [#7432](https://github.com/crewAIInc/crewAI/pull/7432) — skip two path-containment security tests when symlinks are unavailable | PR open |
+| [marimo](https://github.com/marimo-team/marimo) · 22.8k⭐ | [#10638](https://github.com/marimo-team/marimo/pull/10638) — configurable command-mode shortcut; an override bug made every hotkey undisableable | PR open |
+| [datasets](https://github.com/huggingface/datasets) · 21.9k⭐ | [#8628](https://github.com/huggingface/datasets/pull/8628) — skip the tar-symlink extraction test when symlinks are unavailable | PR open |
 
 ### Reported
 | Project | Contribution | Outcome |
 | --- | --- | --- |
-| [litellm](https://github.com/BerriAI/litellm) · 58.5k⭐ | [#40046](https://github.com/BerriAI/litellm/issues/40046) — five tests fail on Windows: symlinks, POSIX quoting, and a POSIX-only file mode | Issue open |
-| [black](https://github.com/psf/black) · 41.8k⭐ | [#5389](https://github.com/psf/black/issues/5389) — three symlink tests fail on Windows, a regression of #287 | Issue open |
+| [litellm](https://github.com/BerriAI/litellm) · 59.0k⭐ | [#40046](https://github.com/BerriAI/litellm/issues/40046) — five tests fail on Windows: symlinks, POSIX quoting, and a POSIX-only file mode | Issue open |
 | [pytorch-lightning](https://github.com/Lightning-AI/pytorch-lightning) · 31.3k⭐ | [#21932](https://github.com/Lightning-AI/pytorch-lightning/issues/21932) — TensorBoard symlink test fails on Windows | Issue open |
-| [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) · 24.2k⭐ | [#3408](https://github.com/modelcontextprotocol/python-sdk/issues/3408) — path-security test fails for unprivileged Windows contributors | Issue open |
+| [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) · 24.3k⭐ | [#3408](https://github.com/modelcontextprotocol/python-sdk/issues/3408) — path-security test fails for unprivileged Windows contributors | Issue open |
 | [adk-python](https://github.com/google/adk-python) · 21.5k⭐ | [#7029](https://github.com/google/adk-python/issues/7029) — new-file check misses added files on Windows under jj and hg | Issue open |
-| [anthropic-sdk-python](https://github.com/anthropics/anthropic-sdk-python) · 3.8k⭐ | [#1915](https://github.com/anthropics/anthropic-sdk-python/issues/1915) — three symlink tests are missing the `needs_symlinks` marker | Issue open |
+| [anthropic-sdk-python](https://github.com/anthropics/anthropic-sdk-python) · 3.9k⭐ | [#1915](https://github.com/anthropics/anthropic-sdk-python/issues/1915) — three symlink tests are missing the `needs_symlinks` marker | Issue open |
 
 **Why these exist.** Several of these projects test Windows in CI, and the jobs are green.
-GitHub's runners can create symlinks; an ordinary Windows user cannot. Privilege-dependent
+GitHub runners can create symlinks; an ordinary Windows user cannot. Privilege-dependent
 code passes CI and fails for every contributor on a normal machine — who usually assumes
 their own setup is broken and never reports it.
 
