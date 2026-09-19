@@ -58,12 +58,16 @@ test suites on Windows, rather than by browsing issue trackers.
 | Project | Contribution | Status |
 | --- | --- | --- |
 | [pipx](https://github.com/pypa/pipx) · 13.0k⭐ | [#2023](https://github.com/pypa/pipx/pull/2023) — the whole test suite errored on Windows without symlink privilege; a session fixture put `git` on `PATH` via a symlink guarded only for `FileExistsError` | ✅ **Merged** |
-| [pylint](https://github.com/pylint-dev/pylint) · 5.7k⭐ | [#11381](https://github.com/pylint-dev/pylint/pull/11381) — `InferenceError` crash when a class attribute is bound by a for-loop target | In review |
-| [pylint](https://github.com/pylint-dev/pylint) · 5.7k⭐ | [#11382](https://github.com/pylint-dev/pylint/pull/11382) — `IndexError` on `Generator[()]`; a guard was vacuously true for an empty subscript | In review |
+| [pylint](https://github.com/pylint-dev/pylint) · 5.7k⭐ | [#11360](https://github.com/pylint-dev/pylint/pull/11360) — a functional test fails on any Windows checkout without symlink privilege | ✅ **Merged** |
 | [marimo](https://github.com/marimo-team/marimo) · 22.6k⭐ | [#10638](https://github.com/marimo-team/marimo/pull/10638) — made the command-mode shortcut configurable; the root cause was an override path that silently made *every* hotkey undisableable | In review |
-| [pylint](https://github.com/pylint-dev/pylint) · 5.7k⭐ | [#11360](https://github.com/pylint-dev/pylint/pull/11360) — a functional test fails on any Windows checkout without symlink privilege | In review |
 | [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) · 24.2k⭐ | [#3408](https://github.com/modelcontextprotocol/python-sdk/issues/3408) — test suite fails for unprivileged Windows contributors; independently reproduced | Reported |
-| [wandb](https://github.com/wandb/wandb) · 11.2k⭐ | [#12726](https://github.com/wandb/wandb/issues/12726) — `sync_tensorboard=True` fails on Windows; `tb_watcher` ignores `settings.symlink` | Reported |
+
+Three more were closed without merging, which is its own kind of signal: pylint
+[#11381](https://github.com/pylint-dev/pylint/pull/11381) and
+[#11382](https://github.com/pylint-dev/pylint/pull/11382) were real bugs that maintainers
+had already fixed in parallel PRs, and I withdrew wandb
+[#12726](https://github.com/wandb/wandb/issues/12726) myself after finding the file it
+described had been deleted upstream — I had filed it against a stale checkout.
 
 **A pattern worth naming.** Several of these projects run Windows in CI, and every Windows
 job is green. GitHub's runners are privileged, so anything privilege-dependent — creating
