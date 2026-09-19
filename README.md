@@ -42,6 +42,15 @@
 - Enabled ~40% faster audit preparation with real-time KPI visibility across global stakeholders
 - Awards: **Continuous Effort Reliability (2024)** · **Integrity (2025)** · **Curious Scholar (2025)**
 
+## Building 🔨
+Things I ship and use myself.
+
+| Project | What it is |
+| --- | --- |
+| [driftsnap](https://github.com/iam-kira/driftsnap) | Catches data-level drift in a table — row drops, null spikes, cardinality collapse, schema change. Your orchestrator says the task succeeded; driftsnap tells you the table came back 30% smaller. One query per snapshot, zero runtime dependencies, snapshots are plain JSON so they diff in git. Python + CLI, works over DuckDB / Iceberg / Postgres / Trino. |
+| [telemetry-lakehouse](https://github.com/iam-kira/telemetry-lakehouse) | Cold-chain monitoring lakehouse built one layer at a time on a single laptop: MQTT → Kafka → Debezium CDC → Apache Iceberg → Dremio. Nine services, durable across daemon crashes, with the recovery playbooks written down. |
+| [aura](https://github.com/iam-kira/what-did-i-do) | A programming language where `yeet` returns and `ghosted` is null. Lexer, parser and tree-walking interpreter in one Python file, zero dependencies. |
+
 ## Open Source 🌱
 Upstream contributions to projects I use — found by reading crash reports and by running
 test suites on Windows, rather than by browsing issue trackers.
@@ -176,4 +185,4 @@ If you want to reach out for collaboration, doubts, or just to talk tech/anime/g
 
 ---
 
-_Last updated: August 2026_
+_Last updated: September 2026_
