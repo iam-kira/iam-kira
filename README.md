@@ -42,8 +42,18 @@
 - Enabled ~40% faster audit preparation with real-time KPI visibility across global stakeholders
 - Awards: **Continuous Effort Reliability (2024)** · **Integrity (2025)** · **Curious Scholar (2025)**
 
+## Building 🔨
+Things I ship and use myself.
+
+| Project | What it is |
+| --- | --- |
+| [driftsnap](https://github.com/iam-kira/driftsnap) | Catches data-level drift in a table — row drops, null spikes, cardinality collapse, schema change. Your orchestrator says the task succeeded; driftsnap tells you the table came back 30% smaller. One query per snapshot, zero runtime dependencies, snapshots are plain JSON so they diff in git. Python + CLI, works over DuckDB / Iceberg / Postgres / Trino. |
+| [telemetry-lakehouse](https://github.com/iam-kira/telemetry-lakehouse) | Cold-chain monitoring lakehouse built one layer at a time on a single laptop: MQTT → Kafka → Debezium CDC → Apache Iceberg → Dremio. Nine services, durable across daemon crashes, with the recovery playbooks written down. |
+| [aura](https://github.com/iam-kira/what-did-i-do) | A programming language where `yeet` returns and `ghosted` is null. Lexer, parser and tree-walking interpreter in one Python file, zero dependencies. |
+
 ## Open Source 🌱
-Bugs found by running test suites and builds on Windows, then reported or fixed upstream.
+Upstream contributions to projects I use — found by running their test suites and
+builds on Windows, rather than by browsing issue trackers.
 
 **3 PRs merged · 4 more fixed upstream from my reports · 6 PRs in review · 5 issues open** — 18 projects.
 
@@ -57,7 +67,6 @@ Bugs found by running test suites and builds on Windows, then reported or fixed 
 | [black](https://github.com/psf/black) · 41.8k⭐ | [#5389](https://github.com/psf/black/issues/5389) — three symlink tests failed on Windows, a regression of #287 | ✅ Fixed in [#5390](https://github.com/psf/black/pull/5390) |
 | [mlflow](https://github.com/mlflow/mlflow) · 28.0k⭐ | [#25641](https://github.com/mlflow/mlflow/issues/25641) — `mlflow-skinny` silently built an empty wheel on Windows checkouts | ✅ Fixed in [#25713](https://github.com/mlflow/mlflow/pull/25713) |
 | [openai-agents-python](https://github.com/openai/openai-agents-python) · 29.5k⭐ | [#4852](https://github.com/openai/openai-agents-python/issues/4852) — 12 sandbox tests failed on Windows without symlink privilege | ◐ Test half fixed in [#4853](https://github.com/openai/openai-agents-python/pull/4853) |
-
 ### In review
 | Project | Contribution | Outcome |
 | --- | --- | --- |
@@ -76,6 +85,13 @@ Bugs found by running test suites and builds on Windows, then reported or fixed 
 | [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) · 24.3k⭐ | [#3408](https://github.com/modelcontextprotocol/python-sdk/issues/3408) — path-security test fails for unprivileged Windows contributors | Issue open |
 | [adk-python](https://github.com/google/adk-python) · 21.5k⭐ | [#7029](https://github.com/google/adk-python/issues/7029) — new-file check misses added files on Windows under jj and hg | Issue open |
 | [anthropic-sdk-python](https://github.com/anthropics/anthropic-sdk-python) · 3.9k⭐ | [#1915](https://github.com/anthropics/anthropic-sdk-python/issues/1915) — three symlink tests are missing the `needs_symlinks` marker | Issue open |
+
+Three more were closed without merging, which is its own kind of signal: pylint
+[#11381](https://github.com/pylint-dev/pylint/pull/11381) and
+[#11382](https://github.com/pylint-dev/pylint/pull/11382) were real bugs that maintainers
+had already fixed in parallel PRs, and I withdrew wandb
+[#12726](https://github.com/wandb/wandb/issues/12726) myself after finding the file it
+described had been deleted upstream — I had filed it against a stale checkout.
 
 **Why these exist.** Several of these projects test Windows in CI, and the jobs are green.
 GitHub runners can create symlinks; an ordinary Windows user cannot. Privilege-dependent
@@ -196,4 +212,4 @@ If you want to reach out for collaboration, doubts, or just to talk tech/anime/g
 
 ---
 
-_Last updated: August 2026_
+_Last updated: September 2026_
