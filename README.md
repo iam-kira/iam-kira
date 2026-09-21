@@ -53,8 +53,8 @@ Things I ship and use myself.
 
 ## Open Source 🌱
 Upstream contributions to projects I use — found by running their test suites and builds on
-Windows, rather than by browsing issue trackers. Sixteen pull requests and sixteen issues
-across twenty-two organisations so far.
+Windows, rather than by browsing issue trackers. Seventeen pull requests and nineteen issues
+across twenty-three organisations so far.
 
 **Merged**
 
@@ -69,13 +69,14 @@ across twenty-two organisations so far.
 
 | Project | Contribution |
 | --- | --- |
-| [transformers](https://github.com/huggingface/transformers) · 166k⭐ | [#48543](https://github.com/huggingface/transformers/pull/48543) — skip the symlinked hub-cache test where symlinks are unavailable · **approved**, awaiting merge |
+| [transformers](https://github.com/huggingface/transformers) · 166k⭐ | [#48543](https://github.com/huggingface/transformers/pull/48543) — skip the symlinked hub-cache test where symlinks are unavailable · **approved**; merge blocked by a bug in their CI gate, fixed in the row below |
 | [marimo](https://github.com/marimo-team/marimo) · 22.9k⭐ | [#10638](https://github.com/marimo-team/marimo/pull/10638) — made the command-mode shortcut configurable; the root cause was an override path that silently made *every* hotkey undisableable |
 | [langflow](https://github.com/langflow-ai/langflow) · 155k⭐ | [#15103](https://github.com/langflow-ai/langflow/pull/15103) — symlink path-containment tests |
 | [LangChain](https://github.com/langchain-ai/langchain) · 147k⭐ | [#40405](https://github.com/langchain-ai/langchain/pull/40405) — three prompt-loading symlink tests |
 | [CrewAI](https://github.com/crewAIInc/crewAI) · 58.8k⭐ | [#7432](https://github.com/crewAIInc/crewAI/pull/7432) — two path-containment security tests |
 | [datasets](https://github.com/huggingface/datasets) · 22.0k⭐ | [#8628](https://github.com/huggingface/datasets/pull/8628) — tar-symlink extraction test |
 | [jupyter-server](https://github.com/jupyter-server/jupyter_server) · 568⭐ | [#1706](https://github.com/jupyter-server/jupyter_server/pull/1706) — contents-manager symlink tests |
+| [transformers-ci](https://github.com/huggingface/transformers-ci) | [#126](https://github.com/huggingface/transformers-ci/pull/126) — Hugging Face's PR security gate aborted on any fork PR touching a `.py` file with an ANSI escape byte; it only runs for outside contributors, so maintainers could never see it |
 
 **Reported, fixed upstream** — bugs I found and wrote up; the fix landed as someone else's patch.
 
@@ -90,6 +91,8 @@ across twenty-two organisations so far.
 
 | Project | Report |
 | --- | --- |
+| [Pydantic](https://github.com/pydantic/pydantic) · 28.8k⭐ | [#13838](https://github.com/pydantic/pydantic/issues/13838) — on an unprivileged Windows checkout, 5,966 of 12,274 tests are silently never collected and the run stays green |
+| [mem0](https://github.com/mem0ai/mem0) · 65.7k⭐ | [#7393](https://github.com/mem0ai/mem0/issues/7393) — plugin-bundle symlink test fails on Windows; independently reproduced by another contributor |
 | [uv](https://github.com/astral-sh/uv) · 90.0k⭐ | [#21850](https://github.com/astral-sh/uv/issues/21850) — the one committed symlink in the repo is a test fixture, and it breaks roughly fourteen tests on an unprivileged Windows checkout |
 | [LiteLLM](https://github.com/BerriAI/litellm) · 59.2k⭐ | [#40046](https://github.com/BerriAI/litellm/issues/40046) — five Windows failures: symlink privilege, hardcoded POSIX quoting, and a POSIX-only file mode |
 | [PyTorch Lightning](https://github.com/Lightning-AI/pytorch-lightning) · 31.4k⭐ | [#21932](https://github.com/Lightning-AI/pytorch-lightning/issues/21932) — `test_tensorboard_with_symlink`; they had already fixed the product side and left the test side alone |
