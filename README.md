@@ -53,7 +53,7 @@ Things I ship and use myself.
 
 ## Open Source 🌱
 Upstream contributions to projects I use — found by running their test suites and builds on
-Windows, rather than by browsing issue trackers. Seventeen pull requests and nineteen issues
+Windows, rather than by browsing issue trackers. Twenty pull requests and nineteen issues
 across twenty-three organisations so far.
 
 **Merged**
@@ -77,11 +77,14 @@ across twenty-three organisations so far.
 | [datasets](https://github.com/huggingface/datasets) · 22.0k⭐ | [#8628](https://github.com/huggingface/datasets/pull/8628) — tar-symlink extraction test |
 | [jupyter-server](https://github.com/jupyter-server/jupyter_server) · 568⭐ | [#1706](https://github.com/jupyter-server/jupyter_server/pull/1706) — contents-manager symlink tests |
 | [transformers-ci](https://github.com/huggingface/transformers-ci) | [#126](https://github.com/huggingface/transformers-ci/pull/126) — Hugging Face's PR security gate aborted on any fork PR touching a `.py` file with an ANSI escape byte; it only runs for outside contributors, so maintainers could never see it |
+| [claude-code-action](https://github.com/anthropics/claude-code-action) · 8.9k⭐ | [#1858](https://github.com/anthropics/claude-code-action/pull/1858) — reject a line number of 0 in the inline-comment server · [#1859](https://github.com/anthropics/claude-code-action/pull/1859) — remove 167 lines of dead code left by the v1.0 refactor · [#1857](https://github.com/anthropics/claude-code-action/pull/1857) — docs |
 
 **Reported, fixed upstream** — bugs I found and wrote up; the fix landed as someone else's patch.
 
 | Project | Report | Fix |
 | --- | --- | --- |
+| [uv](https://github.com/astral-sh/uv) · 90.0k⭐ | [#21850](https://github.com/astral-sh/uv/issues/21850) — the repo’s one committed symlink is a test fixture, and it breaks roughly fourteen tests on an unprivileged Windows checkout | [#21855](https://github.com/astral-sh/uv/pull/21855), merged the same day |
+| [Pydantic](https://github.com/pydantic/pydantic) · 28.8k⭐ | [#13838](https://github.com/pydantic/pydantic/issues/13838) — on an unprivileged Windows checkout 5,966 of 12,274 tests are silently never collected, and the run still reports success | [#13866](https://github.com/pydantic/pydantic/pull/13866) |
 | [Black](https://github.com/psf/black) · 41.8k⭐ | [#5389](https://github.com/psf/black/issues/5389) — three symlink tests, a regression of their own 2018 fix in [#287](https://github.com/psf/black/issues/287) that CI could not observe for seven years | [#5390](https://github.com/psf/black/pull/5390) |
 | [MLflow](https://github.com/mlflow/mlflow) · 28.1k⭐ | [#25641](https://github.com/mlflow/mlflow/issues/25641) — `mlflow-skinny` built a wheel containing zero Python files on a Windows checkout, and exited 0 | [#25713](https://github.com/mlflow/mlflow/pull/25713) |
 | [Gradio](https://github.com/gradio-app/gradio) · 43.6k⭐ | [#13801](https://github.com/gradio-app/gradio/issues/13801) — `gradio skills add` crashed halfway through with `WinError 1314`, leaving a half-installed state | [#13803](https://github.com/gradio-app/gradio/pull/13803) |
@@ -91,9 +94,7 @@ across twenty-three organisations so far.
 
 | Project | Report |
 | --- | --- |
-| [Pydantic](https://github.com/pydantic/pydantic) · 28.8k⭐ | [#13838](https://github.com/pydantic/pydantic/issues/13838) — on an unprivileged Windows checkout, 5,966 of 12,274 tests are silently never collected and the run stays green |
 | [mem0](https://github.com/mem0ai/mem0) · 65.7k⭐ | [#7393](https://github.com/mem0ai/mem0/issues/7393) — plugin-bundle symlink test fails on Windows; independently reproduced by another contributor |
-| [uv](https://github.com/astral-sh/uv) · 90.0k⭐ | [#21850](https://github.com/astral-sh/uv/issues/21850) — the one committed symlink in the repo is a test fixture, and it breaks roughly fourteen tests on an unprivileged Windows checkout |
 | [LiteLLM](https://github.com/BerriAI/litellm) · 59.2k⭐ | [#40046](https://github.com/BerriAI/litellm/issues/40046) — five Windows failures: symlink privilege, hardcoded POSIX quoting, and a POSIX-only file mode |
 | [PyTorch Lightning](https://github.com/Lightning-AI/pytorch-lightning) · 31.4k⭐ | [#21932](https://github.com/Lightning-AI/pytorch-lightning/issues/21932) — `test_tensorboard_with_symlink`; they had already fixed the product side and left the test side alone |
 | [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) · 24.4k⭐ | [#3408](https://github.com/modelcontextprotocol/python-sdk/issues/3408) — path-security test needs elevation; independently reproduced by another contributor |
