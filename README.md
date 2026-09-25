@@ -52,28 +52,71 @@ Things I ship and use myself.
 | [aura](https://github.com/iam-kira/what-did-i-do) | A programming language where `yeet` returns and `ghosted` is null. Lexer, parser and tree-walking interpreter in one Python file, zero dependencies. |
 
 ## Open Source 🌱
-Upstream contributions to projects I use — found by reading crash reports and by running
-test suites on Windows, rather than by browsing issue trackers.
+Upstream contributions to projects I use — found by running their test suites and builds on
+Windows, rather than by browsing issue trackers. Twenty pull requests and nineteen issues
+across twenty-three organisations so far.
 
-| Project | Contribution | Status |
+**Merged**
+
+| Project | Contribution |
+| --- | --- |
+| [pipx](https://github.com/pypa/pipx) · 13.0k⭐ | [#2023](https://github.com/pypa/pipx/pull/2023) — the entire test suite errored on Windows without symlink privilege; a session fixture put `git` on `PATH` via a symlink guarded only for `FileExistsError` |
+| [pylint](https://github.com/pylint-dev/pylint) · 5.7k⭐ | [#11360](https://github.com/pylint-dev/pylint/pull/11360) — a functional test fails on any Windows checkout without symlink privilege, because git writes the link out as a text file and pylint lints the path string |
+| [DSPy](https://github.com/stanfordnlp/dspy) · 38.2k⭐ | [#10410](https://github.com/stanfordnlp/dspy/pull/10410) — alias-collision test skipped when symlink creation is unavailable |
+| [tox](https://github.com/tox-dev/tox) · 3.9k⭐ | [#4078](https://github.com/tox-dev/tox/pull/4078) — three wheel-build tests mock a POSIX venv by symlinking `bin/python`; the layout is POSIX-only regardless of privilege |
+
+**In review**
+
+| Project | Contribution |
+| --- | --- |
+| [transformers](https://github.com/huggingface/transformers) · 166k⭐ | [#48543](https://github.com/huggingface/transformers/pull/48543) — skip the symlinked hub-cache test where symlinks are unavailable · **approved**; merge blocked by a bug in their CI gate, fixed in the row below |
+| [marimo](https://github.com/marimo-team/marimo) · 22.9k⭐ | [#10638](https://github.com/marimo-team/marimo/pull/10638) — made the command-mode shortcut configurable; the root cause was an override path that silently made *every* hotkey undisableable |
+| [langflow](https://github.com/langflow-ai/langflow) · 155k⭐ | [#15103](https://github.com/langflow-ai/langflow/pull/15103) — symlink path-containment tests |
+| [LangChain](https://github.com/langchain-ai/langchain) · 147k⭐ | [#40405](https://github.com/langchain-ai/langchain/pull/40405) — three prompt-loading symlink tests |
+| [CrewAI](https://github.com/crewAIInc/crewAI) · 58.8k⭐ | [#7432](https://github.com/crewAIInc/crewAI/pull/7432) — two path-containment security tests |
+| [datasets](https://github.com/huggingface/datasets) · 22.0k⭐ | [#8628](https://github.com/huggingface/datasets/pull/8628) — tar-symlink extraction test |
+| [jupyter-server](https://github.com/jupyter-server/jupyter_server) · 568⭐ | [#1706](https://github.com/jupyter-server/jupyter_server/pull/1706) — contents-manager symlink tests |
+| [transformers-ci](https://github.com/huggingface/transformers-ci) | [#126](https://github.com/huggingface/transformers-ci/pull/126) — Hugging Face's PR security gate aborted on any fork PR touching a `.py` file with an ANSI escape byte; it only runs for outside contributors, so maintainers could never see it |
+| [claude-code-action](https://github.com/anthropics/claude-code-action) · 8.9k⭐ | [#1858](https://github.com/anthropics/claude-code-action/pull/1858) — reject a line number of 0 in the inline-comment server · [#1859](https://github.com/anthropics/claude-code-action/pull/1859) — remove 167 lines of dead code left by the v1.0 refactor · [#1857](https://github.com/anthropics/claude-code-action/pull/1857) — docs |
+
+**Reported, fixed upstream** — bugs I found and wrote up; the fix landed as someone else's patch.
+
+| Project | Report | Fix |
 | --- | --- | --- |
-| [pipx](https://github.com/pypa/pipx) · 13.0k⭐ | [#2023](https://github.com/pypa/pipx/pull/2023) — the whole test suite errored on Windows without symlink privilege; a session fixture put `git` on `PATH` via a symlink guarded only for `FileExistsError` | ✅ **Merged** |
-| [pylint](https://github.com/pylint-dev/pylint) · 5.7k⭐ | [#11360](https://github.com/pylint-dev/pylint/pull/11360) — a functional test fails on any Windows checkout without symlink privilege | ✅ **Merged** |
-| [marimo](https://github.com/marimo-team/marimo) · 22.6k⭐ | [#10638](https://github.com/marimo-team/marimo/pull/10638) — made the command-mode shortcut configurable; the root cause was an override path that silently made *every* hotkey undisableable | In review |
-| [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) · 24.2k⭐ | [#3408](https://github.com/modelcontextprotocol/python-sdk/issues/3408) — test suite fails for unprivileged Windows contributors; independently reproduced | Reported |
+| [uv](https://github.com/astral-sh/uv) · 90.0k⭐ | [#21850](https://github.com/astral-sh/uv/issues/21850) — the repo’s one committed symlink is a test fixture, and it breaks roughly fourteen tests on an unprivileged Windows checkout | [#21855](https://github.com/astral-sh/uv/pull/21855), merged the same day |
+| [Pydantic](https://github.com/pydantic/pydantic) · 28.8k⭐ | [#13838](https://github.com/pydantic/pydantic/issues/13838) — on an unprivileged Windows checkout 5,966 of 12,274 tests are silently never collected, and the run still reports success | [#13866](https://github.com/pydantic/pydantic/pull/13866) |
+| [Black](https://github.com/psf/black) · 41.8k⭐ | [#5389](https://github.com/psf/black/issues/5389) — three symlink tests, a regression of their own 2018 fix in [#287](https://github.com/psf/black/issues/287) that CI could not observe for seven years | [#5390](https://github.com/psf/black/pull/5390) |
+| [MLflow](https://github.com/mlflow/mlflow) · 28.1k⭐ | [#25641](https://github.com/mlflow/mlflow/issues/25641) — `mlflow-skinny` built a wheel containing zero Python files on a Windows checkout, and exited 0 | [#25713](https://github.com/mlflow/mlflow/pull/25713) |
+| [Gradio](https://github.com/gradio-app/gradio) · 43.6k⭐ | [#13801](https://github.com/gradio-app/gradio/issues/13801) — `gradio skills add` crashed halfway through with `WinError 1314`, leaving a half-installed state | [#13803](https://github.com/gradio-app/gradio/pull/13803) |
+| [OpenAI Agents SDK](https://github.com/openai/openai-agents-python) · 29.6k⭐ | [#4852](https://github.com/openai/openai-agents-python/issues/4852) — sandbox tar extraction plus twelve sandbox tests | [#4853](https://github.com/openai/openai-agents-python/pull/4853) and follow-ups |
 
-Three more were closed without merging, which is its own kind of signal: pylint
+**Reported, open**
+
+| Project | Report |
+| --- | --- |
+| [mem0](https://github.com/mem0ai/mem0) · 65.7k⭐ | [#7393](https://github.com/mem0ai/mem0/issues/7393) — plugin-bundle symlink test fails on Windows; independently reproduced by another contributor |
+| [LiteLLM](https://github.com/BerriAI/litellm) · 59.2k⭐ | [#40046](https://github.com/BerriAI/litellm/issues/40046) — five Windows failures: symlink privilege, hardcoded POSIX quoting, and a POSIX-only file mode |
+| [PyTorch Lightning](https://github.com/Lightning-AI/pytorch-lightning) · 31.4k⭐ | [#21932](https://github.com/Lightning-AI/pytorch-lightning/issues/21932) — `test_tensorboard_with_symlink`; they had already fixed the product side and left the test side alone |
+| [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) · 24.4k⭐ | [#3408](https://github.com/modelcontextprotocol/python-sdk/issues/3408) — path-security test needs elevation; independently reproduced by another contributor |
+| [ADK Python](https://github.com/google/adk-python) · 21.6k⭐ | [#7029](https://github.com/google/adk-python/issues/7029) — a repo check script misses added files on Windows under `jj` and `hg` |
+| [Anthropic SDK](https://github.com/anthropics/anthropic-sdk-python) · 3.9k⭐ | [#1915](https://github.com/anthropics/anthropic-sdk-python/issues/1915) — three tests create symlinks without the `needs_symlinks` marker the repo already defines |
+
+Five pull requests were closed without merging, which is its own kind of signal. pylint
 [#11381](https://github.com/pylint-dev/pylint/pull/11381) and
-[#11382](https://github.com/pylint-dev/pylint/pull/11382) were real bugs that maintainers
-had already fixed in parallel PRs, and I withdrew wandb
+[#11382](https://github.com/pylint-dev/pylint/pull/11382) and OpenAI
+[#4871](https://github.com/openai/openai-agents-python/pull/4871) were real bugs that
+maintainers had already fixed in parallel PRs; mem0
+[#7388](https://github.com/mem0ai/mem0/pull/7388) was auto-closed by a gate bot that only
+reviews PRs attached to an already-agreed issue; and I withdrew wandb
 [#12726](https://github.com/wandb/wandb/issues/12726) myself after finding the file it
 described had been deleted upstream — I had filed it against a stale checkout.
 
-**A pattern worth naming.** Several of these projects run Windows in CI, and every Windows
-job is green. GitHub's runners are privileged, so anything privilege-dependent — creating
-a symlink, for instance — passes in CI and fails on an ordinary Windows machine. CI cannot
-see that class of bug on a platform it explicitly covers, and a contributor who hits it
-usually assumes their own setup is broken rather than filing it.
+**A pattern worth naming.** Most of these projects run Windows in CI, and every Windows job
+is green. GitHub's runners are privileged, so anything privilege-dependent — creating a
+symlink, for instance — passes in CI and fails on an ordinary Windows machine. CI cannot see
+that class of bug on a platform it explicitly covers. When it hits a *product*, users report
+it. When it hits the *test suite*, nobody does: the contributor who trips over it assumes
+their own machine is misconfigured and quietly moves on.
 
 ## Hobbies 🎮
 - Gaming
